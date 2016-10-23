@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script>
+		jQuery(document).ready(function(){
+			var i = 0;
+			$( document ).on( "click", function( event ) {
+				var top = event.pageY+"px";
+				var left = event.pageX+"px";
+				var style = 'top:'+top+';'+'left:'+left+';';
+				var txt = $("<div style=position:absolute;"+style+"></div>").text("·");
+				$("body").after(txt);
+			});
+		});
+	</script>
+	</head>
+   <body>
+      
+   </body>
+</html>
