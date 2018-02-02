@@ -16,7 +16,6 @@ def orderArrayFrogs(array):
 	if (''.join(map(str,array))=='LLL_RRR'):
 		return True
 	for frogPosition in range(7):
-		print('stack num: ',funcCount,' # frogPosition: ',frogPosition)
 		if (frogCanMove(frogPosition,array)):			
 			newArray=array[:]
 			voidPosition=newArray.index('_')
@@ -33,6 +32,7 @@ initialConfiguration=['R','R','R','_','L','L','L']
 random.shuffle(initialConfiguration)
 steps = list()
 ans=orderArrayFrogs(initialConfiguration[:])
+print('Initial conf: ',initialConfiguration)
 if (ans == False):
 	print('Solution not found')
 else:
