@@ -11,7 +11,7 @@ def cycleme(ans: List, start: List, end: List):
     method must return 1, 2, 5
     """
     trans = end[ans[-1]-1]
-    if trans in ans:
+    if trans == ans[0]:
         return ans
     else: 
         ans.append(trans) 
